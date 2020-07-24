@@ -7,6 +7,14 @@ import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 const useStyles = makeStyles({
   root: {
     textTransform: "none"
+  },
+  text: {
+    color: "#81BC00"
+  },
+  outlined: {
+    borderColor: "#81BC00",
+    borderRadius: 0,
+    borderWidth: "2px"
   }
 });
 
@@ -30,10 +38,10 @@ const FileInput = props => {
       />
       <Button
         variant="outlined"
-        children={<span>Adicionar Anexo</span>}
-        className={classes.root}
+        children={<span className={classes.text}>Adicionar Anexo</span>}
+        classes={{ ...classes }}
         startIcon={
-          <AddCircleOutlineIcon style={{ color: "green", fontSize: 15 }} />
+          <AddCircleOutlineIcon style={{ color: "#81BC00", fontSize: 18 }} />
         }
         onClick={e => {
           inputRef.current.click();
